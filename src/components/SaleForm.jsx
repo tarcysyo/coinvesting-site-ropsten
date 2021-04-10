@@ -42,12 +42,12 @@ function SaleForm(props) {
     return (
       <div className="text-center">
         <Card style={{width: "50%", margin: "auto", backgroundColor: "#090909"}} className="text-center">
-          <Card.Title style={{  padding: "2%"}}>
-            COINVEX - Compre agora!
+          <Card.Title style={{fontStyle: "italic", color: "#ffcc00", padding: "2%"}}>
+            Coinvesting DeFi Token - <strong >COINVEX</strong>
           </Card.Title>
           <Form className="text-center" onSubmit={handleSubmit}>
             <Form.Group style={{width: "100%", margin: "auto"}}>
-              <Form.Control className="mb-2 text-center" size="sm" style={{width: "50%", margin: "auto"}} type="number" min="4000" value={tokens} max={100000000 - props.tokensSold} onChange={handleChange} placeholder="Quantidade" />         
+              <Form.Control className="mb-2 text-center" size="sm" style={{width: "50%", margin: "auto"}} type="number" min="5000" value={tokens} max={100000000 - props.tokensSold} onChange={handleChange} placeholder="Quantidade" />         
               <Button className="mb-2" size="md" type="submit" variant="dark" style={{backgroundColor: "#00c800", color: "black", fontWeight: "bolder"}}>
                 Comprar
               </Button>
