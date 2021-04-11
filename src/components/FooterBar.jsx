@@ -36,6 +36,7 @@ function FooterBar() {
       </Modal> 
       <br />
       <span>Coinvesting DeFi &copy; 2021</span>
+      <hr />      
     </footer>
   );
 }; 
