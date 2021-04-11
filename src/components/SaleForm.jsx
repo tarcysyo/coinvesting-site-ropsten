@@ -41,19 +41,19 @@ function SaleForm(props) {
   if (load === true) {
     return (
       <div className="text-center">
-        <Card style={{width: "50%", margin: "auto", backgroundColor: "#090909"}} className="text-center">
-          <Card.Title style={{fontStyle: "italic", color: "#ffcc00", padding: "2%"}}>
+        <Card style={{width: "50%", padding: "1%", margin: "auto", backgroundColor: "#090909"}} className="text-center">
+          <Card.Title style={{color: "#ffcc00", paddingTop: "0%", padding: "2%"}}>
             Coinvesting DeFi Token - <strong >COINVEX</strong>
           </Card.Title>
           <Form className="text-center" onSubmit={handleSubmit}>
-            <Form.Group style={{width: "100%", margin: "auto"}}>
-              <Form.Control className="mb-2 text-center" size="sm" style={{width: "50%", margin: "auto"}} type="number" min="5000" value={tokens} max={100000000 - props.tokensSold} onChange={handleChange} placeholder="Quantidade" />         
-              <Button className="mb-2" size="md" type="submit" variant="dark" style={{backgroundColor: "#00c800", color: "black", fontWeight: "bolder"}}>
+            <Form.Group style={{width: "100%", margin: "auto", marginBottom: "10px"}}>
+              <Form.Control className="mb-2 text-center" size="sm" style={{width: "40%", margin: "auto"}} type="number" min="5000" value={tokens} max={100000000 - props.tokensSold} onChange={handleChange} placeholder="Quantidade" />         
+              <Button className="mb-2" size="md" type="submit" variant="light" style={{backgroundColor: "#32cd32", color: "black", fontWeight: "bolder"}}>
                 Comprar
               </Button>
             </Form.Group>            
           </Form>
-          <Card.Footer>
+          <Card.Footer style={{padding: "1%"}}>
             <ProgressBar style={{width: "70%", margin: "auto"}} striped variant="warning" now={now} />
             <Form.Text style={{color: "#ffcc00"}}>COINVEX vendidos: <strong>{props.tokensSold}</strong>/100000000.</Form.Text>
             <Form.Text style={{color: "#ffcc00"}}>Você possui <strong>{props.tokenBalance}</strong> COINVEX.</Form.Text>
@@ -65,8 +65,8 @@ function SaleForm(props) {
   else {
     return (
       <div className="text-center">
-         <Card style={{width: "50%", margin: "auto", backgroundColor: "#090909"}} className="text-center">
-         <Card.Title style={{  padding: "2%"}}>
+         <Card style={{width: "50%", padding: "1%", margin: "auto", backgroundColor: "#090909"}} className="text-center">
+         <Card.Title style={{color: "#ffcc00", padding: "2%"}}>
             Você está comprando <strong>{tokens}</strong> COINVEX.
           </Card.Title>
           <Form className="text-center">
@@ -75,7 +75,7 @@ function SaleForm(props) {
                 Confirme sua transação na MetaMask!
               </Form.Text>
             </Form.Group>
-            <Button variant="light" disabled={true} style={{margin: "auto auto 20px auto"}}>
+            <Button variant="light" disabled={true} style={{margin: "auto auto 20px auto", backgroundColor: "#32cd32", color: "black", fontWeight: "bolder"}}>
             <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
                 Carregando...
             </Button>

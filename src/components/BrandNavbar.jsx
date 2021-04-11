@@ -21,7 +21,7 @@ function BrandNavbar(props) {
   }, [web3, accounts]);
 
   return (
-    <Navbar bg={logo3} variant="dark" className="justify-content-between" style={{margin: "0 auto 15px auto"}}>
+    <Navbar bg={logo3} variant="dark" className="justify-content-between" style={{margin: "0 auto 5px auto", height: "75px"}}>
         <Navbar.Brand href="#home">
           <img alt="" src={logo3} width="300" height="50" className="d-inline-block align-top" />     
         </Navbar.Brand>

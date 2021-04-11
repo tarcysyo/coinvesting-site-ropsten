@@ -28,12 +28,11 @@ function Bonus(){
   if (end === false){
     return (
       <div className="d-none d-md-block" >
-        <Toast style={{position: "absolute", botton: 0, left: 0, backgroundColor: "black", color: "#ffcc00", width: "225px"}}>
+        <Toast style={{position: "absolute", botton: 0, left: 0, backgroundColor: "black", color: "#ffcc00", width: "250px"}}>
           <Toast.Body style={{backgroundColor: "#090909"}}>
-              <h5 className="text-center"><strong>LANÇAMENTO</strong></h5>             
-              <h6 className="text-center">Compre até <Badge variant="danger">{date}</Badge></h6>      
-              <h6 className="text-center">e ganhe <Badge variant="danger" style={{fontSize: "21px"}}>{bonus}</Badge></h6>  
-              <h6 className="text-center">de BÔNUS!</h6>            
+              <h5 className="text-center"><strong>LANÇAMENTO</strong></h5>
+              <p className="text-center">Compre até <Badge variant="danger" style={{fontSize: "15px"}}>{date}</Badge> e ganhe</p>
+              <p className="text-center"><Badge variant="danger" style={{fontSize: "36px"}}>{bonus}</Badge> de <strong>BÔNUS!</strong></p>          
           </Toast.Body>    
         </Toast>
       </div>    

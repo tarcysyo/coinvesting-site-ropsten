@@ -6,8 +6,8 @@ import logo from '../assets/logo.png';
 
 function Middle(props) {
   return (
-    <div className="text-center" style={{ color: "white", height: "85vh", margin: "auto"}}>
-      <div className="d-none d-md-block img-fluid"><img src={logo} alt="logo" height="350px" /></div>      
+    <div className="text-center" style={{height: "85vh", margin: "auto"}}>
+      <div className="d-none d-md-block"><img  src={logo} alt="logo" height="235px" /></div>      
       <SaleForm 
         buyTokens={props.buyTokens}
         tokensSold={props.tokensSold}
