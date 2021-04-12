@@ -8,7 +8,12 @@ function ButtonConnectWallet() {
   const [mmDetected, setMmDetected] = useState(false);
     
   useEffect(() => {
-    setMmDetected(typeof window.ethereum !== 'undefined');
+    if (typeof window.ethereum === 'undefined'){
+      window.alert('Metamask Wallet não detectada!\nPor favor, instale em:\nhttps://metamask.io/download.html');
+    }
+    else {
+      setMmDetected(typeof window.ethereum !== 'undefined');
+    }    
   }, [setMmDetected]);
     
   return (

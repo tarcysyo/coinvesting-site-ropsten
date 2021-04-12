@@ -89,7 +89,7 @@ function App() {
 			    setTokenBalance(web3.utils.fromWei(tokenBalance, "ether"));
         } 
         else {
-          window.alert("Por favor, conecte-se à MainNet.");
+          window.alert("Por favor, verifique a MetaMask e conecte-se à\nRede de Testes Ropsten.");
         }
         // Get the contract TokenSale instance.
         const tokenSaleData = CoinvestingTokenSale.networks[networkId];
@@ -109,14 +109,11 @@ function App() {
           const _levelFourDate = await tokenSaleContract.methods.levelFourDate().call();
           setLevelFourDate(_levelFourDate);
           setTokenSaleContract(tokenSaleContract);
-        } 
-        else {
-          window.alert("Por favor, conecte-se à MainNet.");
         }
       } catch (error) {
         // Catch any errors for any of the above operations.
         alert(
-          `Não foi possível fazer a conexão. Tente novamente.`,
+          `Desculpe, foi possível fazer executar a transação.\nPor favor, tente novamente.`,
         );
         console.error(error);
       }

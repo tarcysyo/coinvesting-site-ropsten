@@ -3,9 +3,9 @@ import Toast from 'react-bootstrap/Toast';
 
 function Bonus(){
   let bonus;  
-  let date2 = new Date("04/12/2021").toLocaleDateString();
-  let date3 = new Date("04/13/2021").toLocaleDateString();
-  let date4 = new Date("04/14/2021").toLocaleDateString();
+  let date2 = new Date("04/11/2021").toLocaleDateString();
+  let date3 = new Date("04/12/2021").toLocaleDateString();
+  let date4 = new Date("04/13/2021").toLocaleDateString();
   let date= new Date().toLocaleDateString();
   let end = false;
 

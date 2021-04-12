@@ -10,7 +10,7 @@ function BrandNavbar(props) {
   const { web3, accounts } = useContext(Web3Context);
   const [balance, setBalance] = useState(0);
   const shorter = (str) => str && str.length > 8 ? str.slice(0, 6) + '...' + str.slice(-4) : str;
-  const shorterb = (str) => str && str.length > 8 ? str.slice(0, 9) : str;
+  const shorterb = (str) => str && str.length > 8 ? str.slice(0, 7) : str;
 
   useEffect(() => {
     if (!(web3 && accounts.length > 0)) return;

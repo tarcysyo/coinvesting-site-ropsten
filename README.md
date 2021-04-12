@@ -8,23 +8,6 @@ The front-end interface allows the user to interact with the smart contract to m
 
 Metamask Wallet is required.
 
-## Install dependencies
+## To use access:
 
- ### `yarn` 
-
-or
-
-### `npm install`
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-or
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `https://coinvestingdefi.netlify.app/`
