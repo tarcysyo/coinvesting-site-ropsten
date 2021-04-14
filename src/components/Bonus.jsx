@@ -39,7 +39,17 @@ function Bonus(){
     );
   } 
   else {
-    return(null);
+    return(
+      <div className="d-none d-md-block" >
+        <Toast style={{position: "absolute", botton: 0, left: 0, backgroundColor: "black", color: "#ffcc00", width: "250px"}}>
+          <Toast.Body style={{backgroundColor: "#090909"}}>
+              <h5 className="text-center"><strong>Bônus</strong></h5>
+              <p className="text-center">Compre agora e receba um <Badge variant="danger" style={{fontSize: "15px"}}>Bônus</Badge> de </p>
+              <p className="text-center"><Badge variant="danger" style={{fontSize: "36px"}}>{bonus}</Badge>.</p>          
+          </Toast.Body>    
+        </Toast>
+      </div>
+    );
   }
 }
 

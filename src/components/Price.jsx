@@ -12,15 +12,18 @@ function Price(props) {
 
   if(date <= date2){
     date = date2;
-    price = "0,01"
+    price = "0,01";
   }
   else if(date <= date3){
     date = date3;
-    price = "0,02"
+    price = "0,02";
   }
   else if(date <= date4){
     date = date4;
-    price = "0,03"
+    price = "0,03";
+  }
+  else {
+    price = "0,04";
   }
   return (
     <div className="d-none d-md-block" >
