@@ -42,7 +42,7 @@ function App() {
   let price;
 
   const financial = (x) => Number.parseFloat(x).toFixed(2);
-  const converter = (x) => Number.parseFloat(x).toFixed(6);  
+  const converter = (x) => Number.parseFloat(x).toFixed(8);  
   
   (async () => {
     const block = await web3Price.eth.getBlockNumber();

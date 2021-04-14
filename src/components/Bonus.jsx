@@ -11,18 +11,19 @@ function Bonus(){
 
   if(date <= date2){
     date = date2;
-    bonus = "50%"
+    bonus = "50%";
   }
   else if(date <= date3){
     date = date3;
-    bonus = "35%"
+    bonus = "35%";
   }
   else if(date <= date4){
     date = date4;
-    bonus = "20%"
+    bonus = "20%";
   }
   else {
     end = true;
+    bonus = "5%";
   }
 
   if (end === false){
