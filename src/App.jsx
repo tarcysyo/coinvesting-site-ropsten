@@ -42,7 +42,7 @@ function App() {
   let price;
 
   const financial = (x) => Number.parseFloat(x).toFixed(2);
-  const converter = (x) => Number.parseFloat(x).toFixed(8);  
+  const converter = (x) => Number.parseFloat(x).toFixed(6);  
   
   (async () => {
     const block = await web3Price.eth.getBlockNumber();
@@ -69,7 +69,6 @@ function App() {
         setTokenPrice(converter(((0.01**2)*4)/(ETHPrice*0.01)));
       }
       setPriceContract(tokenPrice*10**18);
-      console.log(priceContract);
     }
   );
 

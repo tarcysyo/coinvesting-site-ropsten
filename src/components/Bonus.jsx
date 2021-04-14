@@ -46,7 +46,7 @@ function Bonus(){
           <Toast.Body style={{backgroundColor: "#090909"}}>
               <h5 className="text-center"><strong>Bônus</strong></h5>
               <p className="text-center">Compre agora e receba um <Badge variant="danger" style={{fontSize: "15px"}}>Bônus</Badge> de </p>
-              <p className="text-center"><Badge variant="danger" style={{fontSize: "36px"}}>{bonus}</Badge>.</p>          
+              <p className="text-center"><Badge variant="danger" style={{fontSize: "30px"}}>{bonus}</Badge>.</p>          
           </Toast.Body>    
         </Toast>
       </div>

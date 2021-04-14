@@ -47,7 +47,7 @@ function SaleForm(props) {
           </Card.Title>
           <Form className="text-center" onSubmit={handleSubmit}>
             <Form.Group style={{width: "100%", margin: "auto", marginBottom: "10px"}}>
-              <Form.Control className="mb-2 text-center" size="sm" style={{width: "40%", margin: "auto"}} type="number" min="1" value={tokens} max={100000000 - props.tokensSold} onChange={handleChange} placeholder="Quantidade" />
+              <Form.Control className="mb-2 text-center" size="sm" style={{width: "40%", margin: "auto"}} type="number" min="5000" value={tokens} max={100000000 - props.tokensSold} onChange={handleChange} placeholder="Quantidade" />
               <Button className="mb-2" size="md" type="submit" variant="light" style={{backgroundColor: "#32cd32", color: "black", fontWeight: "bolder"}}>
                 Comprar
               </Button>
