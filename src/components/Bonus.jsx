@@ -31,9 +31,9 @@ function Bonus(){
       <div className="d-none d-md-block" >
         <Toast style={{position: "absolute", botton: 0, left: 0, backgroundColor: "black", color: "#ffcc00", width: "250px"}}>
           <Toast.Body style={{backgroundColor: "#090909"}}>
-              <h5 className="text-center"><strong>LANÇAMENTO</strong></h5>
-              <p className="text-center">Compre até <Badge variant="danger" style={{fontSize: "15px"}}>{date}</Badge> e ganhe</p>
-              <p className="text-center"><Badge variant="danger" style={{fontSize: "36px"}}>{bonus}</Badge> de <strong>BÔNUS!</strong></p>          
+              <h5 className="text-center"><strong>Lançamento</strong></h5>
+              <p className="text-center" style={{fontSize: "13px"}}>Compre até <Badge variant="danger" style={{fontSize: "15px"}}>{date}</Badge> e ganhe</p>
+              <p className="text-center"><Badge variant="danger" style={{fontSize: "37px"}}>{bonus}</Badge> de <strong>BÔNUS!</strong></p>          
           </Toast.Body>    
         </Toast>
       </div>    
@@ -45,8 +45,8 @@ function Bonus(){
         <Toast style={{position: "absolute", botton: 0, left: 0, backgroundColor: "black", color: "#ffcc00", width: "250px"}}>
           <Toast.Body style={{backgroundColor: "#090909"}}>
               <h5 className="text-center"><strong>Bônus</strong></h5>
-              <p className="text-center">Compre agora e receba um <Badge variant="danger" style={{fontSize: "15px"}}>Bônus</Badge> de </p>
-              <p className="text-center"><Badge variant="danger" style={{fontSize: "30px"}}>{bonus}</Badge>.</p>          
+              <p className="text-center" style={{fontSize: "21px"}}>Compre agora e receba</p>
+              <p> um <Badge variant="danger" style={{fontSize: "25px"}}>Bônus</Badge> de <Badge variant="danger" style={{fontSize: "31px"}}>{bonus}</Badge> .</p>          
           </Toast.Body>    
         </Toast>
       </div>

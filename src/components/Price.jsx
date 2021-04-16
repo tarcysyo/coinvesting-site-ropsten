@@ -29,10 +29,10 @@ function Price(props) {
     <div className="d-none d-md-block" >
       <Toast style={{position: "absolute", botton: 0, right: 0, backgroundColor: "black", color: "#ffcc00", width: "250px"}}>
         <Toast.Body style={{backgroundColor: "#090909"}}>
-          <h5 className="text-center"><strong>COTAÇÃO</strong></h5>   
+          <h5 className="text-center"><strong>Cotação</strong></h5>   
           <p><img alt="ETH" src={eth} width="22" height="35" /> <strong> {props.ETHPrice} <small>USD</small></strong> </p>
           <p><img alt="COINVEX" src={coinvex} width="22" height="22" /> <strong> {props.tokenPrice} <small>ETH</small></strong></p> 
-          <h6 className="text-center" style={{fontSize: "10px"}}> O preço de 1 <strong>COINVEX </strong> é <strong>US$ {price}</strong></h6> 
+          <h6 className="text-center" style={{fontSize: "11px"}}> O preço de 1 <strong>COINVEX </strong> é <strong>US$ {price}</strong></h6> 
         </Toast.Body>    
       </Toast>
     </div>    

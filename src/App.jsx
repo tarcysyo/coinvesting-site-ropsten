@@ -23,6 +23,7 @@ function App() {
   const [tokenBalance, setTokenBalance] = useState("0");
   const [tokenSaleContract, setTokenSaleContract] = useState(undefined);
 	const [tokensSold, setTokenSold] = useState("");
+  const [loadPrice, setLoadPrice] = useState(false);
   
   let bonus;
   let sale;  
@@ -44,33 +45,35 @@ function App() {
   const financial = (x) => Number.parseFloat(x).toFixed(2);
   const converter = (x) => Number.parseFloat(x).toFixed(6);  
   
-  (async () => {
-    const block = await web3Price.eth.getBlockNumber();
-    web3Price.eth.getBlock(block, (error, block) => {
-      setTimestamp (block.timestamp);
-    });
-  })();
-
-  priceFeed.methods.latestRoundData().call().then(
-    (roundData) => {      
-      // Do something with roundData
-      setOracle(roundData.answer);
-      setETHPrice(financial(oracle/10**8));
-      if (timestamp <= (parseInt(levelOneDate, 10) + parseInt(levelTwoDate, 10))) {
-        setTokenPrice(converter(((0.01**2))/(ETHPrice*0.01)));
+  if(loadPrice === true){
+    (async () => {
+      const block = await web3Price.eth.getBlockNumber();
+      web3Price.eth.getBlock(block, (error, block) => {
+        setTimestamp (block.timestamp);
+      });
+    })();
+  
+    priceFeed.methods.latestRoundData().call().then(
+      (roundData) => {      
+        // Do something with roundData
+        setOracle(roundData.answer);
+        setETHPrice(financial(oracle/10**8));
+        if (timestamp <= (parseInt(levelOneDate, 10) + parseInt(levelTwoDate, 10))) {
+          setTokenPrice(converter(((0.01**2))/(ETHPrice*0.01)));
+        }
+        else if (timestamp <= (parseInt(levelOneDate, 10) + parseInt(levelTwoDate, 10) + parseInt(levelThreeDate, 10))) {
+          setTokenPrice(converter(((0.01**2)*2)/(ETHPrice*0.01)));
+        }
+        else if (timestamp <= (parseInt(levelOneDate, 10) + parseInt(levelTwoDate, 10) + parseInt(levelThreeDate, 10) + parseInt(levelFourDate, 10))) {
+          setTokenPrice(converter(((0.01**2)*3)/(ETHPrice*0.01)));
+        }
+        else {
+          setTokenPrice(converter(((0.01**2)*4)/(ETHPrice*0.01)));
+        }
+        setPriceContract(tokenPrice*10**18);
       }
-      else if (timestamp <= (parseInt(levelOneDate, 10) + parseInt(levelTwoDate, 10) + parseInt(levelThreeDate, 10))) {
-        setTokenPrice(converter(((0.01**2)*2)/(ETHPrice*0.01)));
-      }
-      else if (timestamp <= (parseInt(levelOneDate, 10) + parseInt(levelTwoDate, 10) + parseInt(levelThreeDate, 10) + parseInt(levelFourDate, 10))) {
-        setTokenPrice(converter(((0.01**2)*3)/(ETHPrice*0.01)));
-      }
-      else {
-        setTokenPrice(converter(((0.01**2)*4)/(ETHPrice*0.01)));
-      }
-      setPriceContract(tokenPrice*10**18);
-    }
-  );
+    );
+  }
 
   // Initialization of smart contracts
   useEffect(() => {
@@ -87,6 +90,7 @@ function App() {
           );
           const tokenBalance = await tokenContract.methods.balanceOf(accounts[0]).call();
 			    setTokenBalance(web3.utils.fromWei(tokenBalance, "ether"));
+          setLoadPrice(true);
         } 
         else {
           window.alert("Por favor, verifique a MetaMask e conecte-se à\nRede de Testes Ropsten.");
